@@ -1,1 +1,17 @@
 
+name: Terraform Apply and destroy
+#Workflow name
+on: #on which event you wanna run this workflow
+  workflow_dispatch: #This line help trigger workflow manually or we can also use on push or pull
+    inputs:
+      action: #action should be applied or destroy
+        description: 'creating newrelic'
+        required: true
+        default: 'apply' #default value when we don't apply any value.
+        option:
+          - 'apply'
+          - 'destroy'
+ Jobs: #predefine heading under this we give multiple jobs
+   Job1: #build will be there, testing will be there, deploy will be there all these things are considered as jobs. for different jobs
+      run
+          
